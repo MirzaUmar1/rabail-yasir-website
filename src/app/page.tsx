@@ -82,35 +82,71 @@ export default function Home() {
       <section id="collections" className="py-24 px-6 md:px-12 bg-[#F8F6F0]">
         <motion.h3 {...fadeUp} className="font-serif text-4xl md:text-6xl mb-16 text-[#c1b199] text-center">Fashion Sketches</motion.h3>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div {...fadeUp} transition={{ delay: 0.1, duration: 0.8 }} className="col-span-1 md:col-span-2 relative aspect-[16/9] w-full overflow-hidden group">
-            <Image src="/portfolio/collection/1.jpeg" alt="Sketch 1" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
-          </motion.div>
-          <motion.div {...fadeUp} transition={{ delay: 0.2, duration: 0.8 }} className="col-span-1 relative aspect-[3/4] w-full overflow-hidden group">
-            <Image src="/portfolio/collection/2.jpeg" alt="Sketch 2" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
-          </motion.div>
-          <motion.div {...fadeUp} transition={{ delay: 0.3, duration: 0.8 }} className="col-span-1 relative aspect-[3/4] w-full overflow-hidden group">
-            <Image src="/portfolio/collection/3.jpeg" alt="Sketch 3" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
-          </motion.div>
-          <motion.div {...fadeUp} transition={{ delay: 0.4, duration: 0.8 }} className="col-span-1 md:col-span-2 relative aspect-[16/9] w-full overflow-hidden group">
-            <Image src="/portfolio/collection/4.jpeg" alt="Sketch 4" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
-          </motion.div>
+          {[1, 2, 3, 4, 5, 6, 7].map((num, i) => (
+            <motion.div 
+              key={`sketch-${num}`}
+              {...fadeUp} 
+              transition={{ delay: (i % 3) * 0.1, duration: 0.8 }} 
+              className={`relative w-full overflow-hidden group ${i === 0 || i === 3 ? 'col-span-1 md:col-span-2 aspect-[16/9]' : 'col-span-1 aspect-[3/4]'}`}
+            >
+              <Image src={`/portfolio/collection/${num}.jpeg`} alt={`Sketch ${num}`} fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Samples */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <motion.h3 {...fadeUp} className="font-serif text-4xl md:text-6xl mb-16 text-[#c1b199] text-center">Samples</motion.h3>
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
+          {[1, 2, 3, 4, 5].map((num, i) => (
+            <motion.div 
+              key={`sample-${num}`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="relative aspect-[3/4] w-full max-w-sm overflow-hidden group flex-grow md:flex-grow-0"
+            >
+              <Image src={`/portfolio/samples/${num}.jpeg`} alt={`Sample ${num}`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Mood Boards */}
+      <section className="py-24 px-6 md:px-12 bg-[#F8F6F0]">
+        <motion.h3 {...fadeUp} className="font-serif text-4xl md:text-6xl mb-16 text-[#c1b199] text-center">Mood Boards</motion.h3>
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          {["2", "WhatsApp Image 2026-04-29 at 7.05.55 PM", "death", "devil", "hell", "reflection", "soul.", "soul"].map((name, i) => (
+            <motion.div 
+              key={`board-${i}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ delay: (i % 4) * 0.1, duration: 0.6 }}
+              className={`relative w-full overflow-hidden group ${i === 4 || i === 7 ? 'aspect-square' : 'aspect-[4/5]'}`}
+            >
+              <Image src={`/portfolio/boards/${encodeURIComponent(name)}.jpeg`} alt={`Mood Board ${name}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
+            </motion.div>
+          ))}
         </div>
       </section>
 
       {/* Anime Drawings Collection */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <motion.h3 {...fadeUp} className="font-serif text-4xl md:text-6xl mb-16 text-[#c1b199] text-center">Anime Drawings</motion.h3>
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((num, i) => (
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((num, i) => (
             <motion.div 
-              key={num} 
+              key={`anime-${num}`} 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
+              transition={{ delay: (i % 5) * 0.1, duration: 0.6 }}
               className="relative aspect-square w-full overflow-hidden group"
             >
-              <Image src={`/portfolio/developments/${num}.jpeg`} alt={`Anime ${num}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
+              <Image src={`/portfolio/developments/${num}.jpeg`} alt={`Anime ${num}`} fill sizes="(max-width: 768px) 50vw, 20vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
             </motion.div>
           ))}
         </div>
