@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-100px" },
+  viewport: { once: true, amount: 0.1 },
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
@@ -70,11 +70,11 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="flex-1 relative aspect-[4/5] w-full max-w-md"
+          className="flex-1 relative aspect-[4/5] w-full max-w-md overflow-hidden group"
         >
-          <Image src="/portfolio/boards/soul.jpeg" alt="Artist Inspiration" fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+          <Image src="/portfolio/boards/soul.jpeg" alt="Artist Inspiration" fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out" />
         </motion.div>
       </section>
 
@@ -82,17 +82,17 @@ export default function Home() {
       <section id="collections" className="py-24 px-6 md:px-12 bg-[#F8F6F0]">
         <motion.h3 {...fadeUp} className="font-serif text-4xl md:text-6xl mb-16 text-[#c1b199] text-center">Fashion Sketches</motion.h3>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div {...fadeUp} transition={{ delay: 0.1, duration: 0.8 }} className="col-span-1 md:col-span-2 relative aspect-[16/9] w-full">
-            <Image src="/portfolio/collection/1.jpeg" alt="Sketch 1" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover hover:scale-105 transition-transform duration-700" />
+          <motion.div {...fadeUp} transition={{ delay: 0.1, duration: 0.8 }} className="col-span-1 md:col-span-2 relative aspect-[16/9] w-full overflow-hidden group">
+            <Image src="/portfolio/collection/1.jpeg" alt="Sketch 1" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
           </motion.div>
-          <motion.div {...fadeUp} transition={{ delay: 0.2, duration: 0.8 }} className="col-span-1 relative aspect-[3/4] w-full">
-            <Image src="/portfolio/collection/2.jpeg" alt="Sketch 2" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-700" />
+          <motion.div {...fadeUp} transition={{ delay: 0.2, duration: 0.8 }} className="col-span-1 relative aspect-[3/4] w-full overflow-hidden group">
+            <Image src="/portfolio/collection/2.jpeg" alt="Sketch 2" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
           </motion.div>
-          <motion.div {...fadeUp} transition={{ delay: 0.3, duration: 0.8 }} className="col-span-1 relative aspect-[3/4] w-full">
-            <Image src="/portfolio/collection/3.jpeg" alt="Sketch 3" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-700" />
+          <motion.div {...fadeUp} transition={{ delay: 0.3, duration: 0.8 }} className="col-span-1 relative aspect-[3/4] w-full overflow-hidden group">
+            <Image src="/portfolio/collection/3.jpeg" alt="Sketch 3" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
           </motion.div>
-          <motion.div {...fadeUp} transition={{ delay: 0.4, duration: 0.8 }} className="col-span-1 md:col-span-2 relative aspect-[16/9] w-full">
-            <Image src="/portfolio/collection/4.jpeg" alt="Sketch 4" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover hover:scale-105 transition-transform duration-700" />
+          <motion.div {...fadeUp} transition={{ delay: 0.4, duration: 0.8 }} className="col-span-1 md:col-span-2 relative aspect-[16/9] w-full overflow-hidden group">
+            <Image src="/portfolio/collection/4.jpeg" alt="Sketch 4" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
           </motion.div>
         </div>
       </section>
@@ -106,11 +106,11 @@ export default function Home() {
               key={num} 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="relative aspect-square w-full overflow-hidden"
+              className="relative aspect-square w-full overflow-hidden group"
             >
-              <Image src={`/portfolio/developments/${num}.jpeg`} alt={`Anime ${num}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover hover:scale-110 transition-transform duration-700" />
+              <Image src={`/portfolio/developments/${num}.jpeg`} alt={`Anime ${num}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out" />
             </motion.div>
           ))}
         </div>

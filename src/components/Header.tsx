@@ -28,7 +28,7 @@ export default function Header() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="sticky top-0 z-50 w-full bg-[#F8F6F0]/90 backdrop-blur-md border-b border-[#EAE3D2]"
     >
-      <div className="flex items-center justify-between px-6 py-4 md:px-12">
+      <div className="flex items-center justify-between px-6 py-4 md:px-12 relative">
         {/* Left Links */}
         <nav className="hidden md:flex flex-1 items-center gap-8 text-sm uppercase tracking-widest text-[#2D2D2D]">
           <Link href="#collections" className="hover:text-black/60 transition-colors">Collections</Link>
@@ -37,7 +37,7 @@ export default function Header() {
         </nav>
 
         {/* Center Logo */}
-        <div className="flex-1 text-center">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-auto">
           <Link href="/" className="text-2xl md:text-3xl font-serif tracking-widest uppercase">
             Rabail Yasir
           </Link>
