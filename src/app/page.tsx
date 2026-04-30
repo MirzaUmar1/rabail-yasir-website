@@ -43,7 +43,7 @@ export default function Home() {
             Fashion is my language of expression—where culture, creativity, and craftsmanship come together to tell powerful and meaningful stories.
           </p>
           <p className="font-sans text-sm text-[#2D2D2D]/70 tracking-widest leading-loose mt-8 uppercase">
-            I am Yasha Mushtaq, a fashion artist who loves what I do and the stories I tell. My experiences in fashion have influenced my approach to design—not only as garments, but as a means of communication. I am committed to sustainability; I design pieces that are conscientious, considerate, and long-lasting, merging artistry with functionality to create a better future for fashion.
+            I am Rabail Yasir, a fashion artist who loves what I do and the stories I tell. My experiences in fashion have influenced my approach to design—not only as garments, but as a means of communication. I am committed to sustainability; I design pieces that are conscientious, considerate, and long-lasting, merging artistry with functionality to create a better future for fashion.
           </p>
         </div>
         <div className="flex-1 relative aspect-[4/5] w-full max-w-md">

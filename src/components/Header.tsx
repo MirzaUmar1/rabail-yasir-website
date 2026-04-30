@@ -39,7 +39,7 @@ export default function Header() {
         {/* Center Logo */}
         <div className="flex-1 text-center md:text-left">
           <Link href="/" className="text-2xl md:text-3xl font-serif tracking-widest uppercase">
-            Yasha Mushtaq
+            Rabail Yasir
           </Link>
         </div>
 
