@@ -14,10 +14,9 @@ export default function Footer() {
 
         <div className="flex flex-col">
           <p className="font-sans text-sm tracking-widest leading-loose uppercase">
-            123 Downtown St.<br />
-            Dubai, UAE<br />
-            UAE<br />
-            (+9223) 456 7890
+            Islamabad<br />
+            Pakistan<br />
+            +92 333 1234567
           </p>
         </div>
 
