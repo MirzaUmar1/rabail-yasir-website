@@ -117,10 +117,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { id: 1, span: "col-span-1 md:col-span-2", aspect: "aspect-[4/3]" },
-            { id: 2, span: "col-span-1", aspect: "aspect-[3/4]" },
-            { id: 3, span: "col-span-1", aspect: "aspect-[3/4]" },
-            { id: 4, span: "col-span-1 md:col-span-2", aspect: "aspect-[4/3]" },
-            { id: 5, span: "col-span-1 md:col-span-3", aspect: "aspect-[21/9]" },
+            { id: 3, span: "col-span-1", aspect: "aspect-[4/5]" },
+            { id: 4, span: "col-span-1", aspect: "aspect-[4/5]" },
+            { id: 5, span: "col-span-1 md:col-span-2", aspect: "aspect-[4/3]" },
           ].map((item, i) => (
             <motion.div 
               key={`sample-${item.id}`}
@@ -176,11 +175,16 @@ export default function Home() {
 
       {/* Behind the Scenes / Curated */}
       <section id="behind-the-scenes" className="py-40 px-6 md:px-12 bg-[#EAE3D2] text-center">
-        <motion.div {...textReveal} className="max-w-4xl mx-auto flex flex-col items-center">
+        <motion.div {...textReveal} className="max-w-5xl mx-auto flex flex-col items-center">
           <div className="flex gap-12 md:gap-32 mb-16 overflow-hidden">
             <motion.h3 initial={{ y: 100 }} whileInView={{ y: 0 }} transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] as const }} className="font-serif text-5xl md:text-7xl text-[#c1b199]">Watch</motion.h3>
             <motion.h3 initial={{ y: 100 }} whileInView={{ y: 0 }} transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] as const }} className="font-serif text-5xl md:text-7xl text-[#c1b199]">Wear</motion.h3>
           </div>
+
+          <motion.div {...imageReveal} className="w-full aspect-[21/9] md:aspect-[3/1] relative overflow-hidden group mb-16">
+             <Image src="/portfolio/behind the scenes/bts1.jpeg" alt="Behind the scenes" fill sizes="(max-width: 1200px) 100vw, 80vw" className="object-cover group-hover:scale-105 transition-transform duration-[3000ms] ease-out" />
+          </motion.div>
+
           <div className="flex gap-8 md:gap-24 mb-16 uppercase tracking-widest text-sm font-bold text-[#2D2D2D]">
             <span>Behind-the-scenes moments</span>
             <span>Curated collections</span>
