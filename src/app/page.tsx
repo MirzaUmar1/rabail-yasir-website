@@ -174,25 +174,27 @@ export default function Home() {
       </section>
 
       {/* Behind the Scenes / Curated */}
-      <section id="behind-the-scenes" className="py-40 px-6 md:px-12 bg-[#EAE3D2] text-center">
-        <motion.div {...textReveal} className="max-w-5xl mx-auto flex flex-col items-center">
-          <div className="flex gap-12 md:gap-32 mb-16 overflow-hidden">
-            <motion.h3 initial={{ y: 100 }} whileInView={{ y: 0 }} transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] as const }} className="font-serif text-5xl md:text-7xl text-[#c1b199]">Watch</motion.h3>
-            <motion.h3 initial={{ y: 100 }} whileInView={{ y: 0 }} transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] as const }} className="font-serif text-5xl md:text-7xl text-[#c1b199]">Wear</motion.h3>
-          </div>
-
-          <motion.div {...imageReveal} className="w-full aspect-[21/9] md:aspect-[3/1] relative overflow-hidden group mb-16">
-             <Image src="/portfolio/behind the scenes/bts1.jpeg" alt="Behind the scenes" fill sizes="(max-width: 1200px) 100vw, 80vw" className="object-cover group-hover:scale-105 transition-transform duration-[3000ms] ease-out" />
+      <section id="behind-the-scenes" className="py-40 px-6 md:px-12 bg-[#EAE3D2]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <motion.div {...imageReveal} className="flex-1 w-full relative aspect-[3/4] md:aspect-square overflow-hidden group">
+             <Image src="/portfolio/behind the scenes/bts1.jpeg" alt="Behind the scenes" fill sizes="(max-width: 1200px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-[3000ms] ease-out" />
           </motion.div>
 
-          <div className="flex gap-8 md:gap-24 mb-16 uppercase tracking-widest text-sm font-bold text-[#2D2D2D]">
-            <span>Behind-the-scenes moments</span>
-            <span>Curated collections</span>
-          </div>
-          <p className="font-sans text-sm md:text-base text-[#2D2D2D] tracking-widest leading-loose uppercase max-w-2xl">
-            Created with care. Every garment is carefully designed and made with conscious practices to minimise waste and promote a sustainable future in fashion.
-          </p>
-        </motion.div>
+          <motion.div {...textReveal} className="flex-1 flex flex-col text-center md:text-left">
+            <div className="flex justify-center md:justify-start gap-8 md:gap-16 mb-12 overflow-hidden">
+              <motion.h3 initial={{ y: 100 }} whileInView={{ y: 0 }} transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] as const }} className="font-serif text-5xl md:text-7xl text-[#c1b199]">Watch</motion.h3>
+              <motion.h3 initial={{ y: 100 }} whileInView={{ y: 0 }} transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] as const }} className="font-serif text-5xl md:text-7xl text-[#c1b199]">Wear</motion.h3>
+            </div>
+            
+            <div className="flex flex-col gap-4 mb-8 uppercase tracking-widest text-sm font-bold text-[#2D2D2D]">
+              <span>Behind-the-scenes moments</span>
+              <span>Curated collections</span>
+            </div>
+            <p className="font-sans text-sm md:text-base text-[#2D2D2D] tracking-widest leading-loose uppercase max-w-lg mx-auto md:mx-0">
+              Created with care. Every garment is carefully designed and made with conscious practices to minimise waste and promote a sustainable future in fashion.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       <Footer />
