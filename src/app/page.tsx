@@ -87,13 +87,15 @@ export default function Home() {
         <motion.h3 {...textReveal} className="font-serif text-4xl md:text-6xl mb-20 text-[#c1b199] text-center">Photoshoot</motion.h3>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10">
           {[
-            { id: 1, span: "col-span-1 md:col-span-8", aspect: "aspect-[16/9]" },
+            { id: 5, span: "col-span-1 md:col-span-8", aspect: "aspect-[16/9]" },
             { id: 2, span: "col-span-1 md:col-span-4", aspect: "aspect-[3/4]" },
-            { id: 3, span: "col-span-1 md:col-span-4", aspect: "aspect-[3/4]" },
-            { id: 4, span: "col-span-1 md:col-span-8", aspect: "aspect-[16/9]" },
-            { id: 5, span: "col-span-1 md:col-span-6", aspect: "aspect-square" },
-            { id: 6, span: "col-span-1 md:col-span-6", aspect: "aspect-square" },
-            { id: 7, span: "col-span-1 md:col-span-12", aspect: "aspect-[21/9]" },
+            { id: 8, span: "col-span-1 md:col-span-4", aspect: "aspect-[3/4]" },
+            { id: 1, span: "col-span-1 md:col-span-8", aspect: "aspect-[16/9]" },
+            { id: 4, span: "col-span-1 md:col-span-4", aspect: "aspect-square" },
+            { id: 9, span: "col-span-1 md:col-span-4", aspect: "aspect-square" },
+            { id: 6, span: "col-span-1 md:col-span-4", aspect: "aspect-square" },
+            { id: 3, span: "col-span-1 md:col-span-6", aspect: "aspect-[4/5]" },
+            { id: 7, span: "col-span-1 md:col-span-6", aspect: "aspect-[4/5]" },
           ].map((item, i) => (
             <motion.div 
               key={`sketch-${item.id}`}
