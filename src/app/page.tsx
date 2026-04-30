@@ -82,9 +82,9 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Fashion Sketches Collection (Editorial Asymmetrical Grid) */}
+      {/* Photoshoot Collection (Editorial Asymmetrical Grid) */}
       <section id="collections" className="py-32 px-6 md:px-12 bg-[#F8F6F0]">
-        <motion.h3 {...textReveal} className="font-serif text-4xl md:text-6xl mb-20 text-[#c1b199] text-center">Fashion Sketches</motion.h3>
+        <motion.h3 {...textReveal} className="font-serif text-4xl md:text-6xl mb-20 text-[#c1b199] text-center">Photoshoot</motion.h3>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10">
           {[
             { id: 1, span: "col-span-1 md:col-span-8", aspect: "aspect-[16/9]" },
@@ -153,9 +153,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Anime Drawings (Tight Wall of Art) */}
+      {/* Development (Tight Wall of Art) */}
       <section className="py-32 px-6 md:px-12 bg-white">
-        <motion.h3 {...textReveal} className="font-serif text-4xl md:text-6xl mb-20 text-[#c1b199] text-center">Anime Drawings</motion.h3>
+        <motion.h3 {...textReveal} className="font-serif text-4xl md:text-6xl mb-20 text-[#c1b199] text-center">Development</motion.h3>
         <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((num, i) => (
             <motion.div 
