@@ -37,7 +37,7 @@ export default function Header() {
         </nav>
 
         {/* Center Logo */}
-        <div className="flex-1 text-center md:text-left">
+        <div className="flex-1 text-center">
           <Link href="/" className="text-2xl md:text-3xl font-serif tracking-widest uppercase">
             Rabail Yasir
           </Link>
