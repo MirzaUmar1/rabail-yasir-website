@@ -66,12 +66,12 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-32 px-6 md:px-12 bg-white flex flex-col md:flex-row items-center justify-center gap-16 overflow-hidden">
         <motion.div {...textReveal} className="flex-1 max-w-xl">
-          <h3 className="font-serif text-5xl md:text-7xl mb-12 text-[#c1b199] leading-none">More About<br/>Fashion</h3>
+          <h3 className="font-serif text-5xl md:text-7xl mb-12 text-[#c1b199] leading-none uppercase">The Art Of<br/>Reanimation</h3>
           <p className="font-serif text-xl md:text-3xl text-[#2D2D2D] leading-relaxed">
-            Fashion is my language of expression—where culture, creativity, and craftsmanship come together to tell powerful and meaningful stories.
+            Welcome to my creative space. I am Rabail, a designer, dedicated to exploring the intersection of high-concept fashion and circular sustainability.
           </p>
           <p className="font-sans text-sm text-[#2D2D2D]/70 tracking-widest leading-loose mt-8 uppercase">
-            I am Rabail Yasir, a fashion artist who loves what I do and the stories I tell. My experiences in fashion have influenced my approach to design—not only as garments, but as a means of communication. I am committed to sustainability; I design pieces that are conscientious, considerate, and long-lasting, merging artistry with functionality to create a better future for fashion.
+            My work is defined by the practice of "Soft Graffiti" a technical intervention where I use yarn bombing to breathe new life into structural garments. By reclaiming the silent "skeletons" of my design process and encasing them in dense, hand-crafted textures and linear suspensions, I transform static toiles into living narratives of metamorphosis. For me, yarn bombing is not just a decorative layer; it is a subversive tool used to give garments a second life, turning raw prototypes into vibrant, scholarly artefacts that bridge the gap between traditional craftsmanship and the future of conscious luxury.
           </p>
         </motion.div>
         <motion.div 
