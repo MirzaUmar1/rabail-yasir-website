@@ -78,7 +78,7 @@ export default function Home() {
           {...imageReveal}
           className="flex-1 relative aspect-[3/4] w-full max-w-lg overflow-hidden group"
         >
-          <Image src="/portfolio/boards/mainboard.jpeg" alt="Artist Inspiration" fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-[2500ms] ease-out" />
+          <Image src="/portfolio/boards/mainboard1.jpeg" alt="Artist Inspiration" fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-[2500ms] ease-out" />
         </motion.div>
       </section>
 
